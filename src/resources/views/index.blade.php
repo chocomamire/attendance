@@ -17,6 +17,7 @@
         </form>
         <form class="attendance__button" action="/attendance/end" method="post">
             @csrf
+            <!-- method('patch') -->
             <button class="attendance__button-submit" type="submit">勤務終了</button>
         </form>
     </div>

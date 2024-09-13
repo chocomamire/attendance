@@ -17,8 +17,8 @@ class CreateBreaksTable extends Migration
             $table->id();
             $table->timestamp('break_start')->useCurrent()->nullable();
             $table->timestamp('break_end')->useCurrent()->nullable();
-            $table->timestamps($precision = 0);
-            $table->foreignId('attendance_id')->constrained('attendances');
+            $table->timestamps();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

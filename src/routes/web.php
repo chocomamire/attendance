@@ -31,8 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [AttendanceController::class, 'index']);
     //出退勤打刻
     Route::post('/attendance/start', [AttendanceController::class, 'store']);
-    Route::post('/attendance/end', [AttendanceController::class, 'update']);
+    Route::post('/attendance/end/{id}', [AttendanceController::class, 'update']);
     //休憩打刻
-    Route::post('break/start', [AttendanceController::class, 'store']);
-    Route::post('break/end', [AttendanceController::class, 'update']);
+    Route::post('break/start', [BreaktimeController::class, 'store']);
+    Route::post('break/end', [BreaktimeController::class, 'update']);
 });

@@ -1,3 +1,9 @@
+.attendance__alert {
+    text-align: center;
+    width: 70%;
+    background-color: #b9b9b9;
+}
+
 .attendance__alert--success {
     padding: 10px 30px;
     border-color: #badbcc;

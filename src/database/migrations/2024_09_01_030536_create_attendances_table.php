@@ -17,8 +17,8 @@ class CreateAttendancesTable extends Migration
             $table->id();
             $table->timestamp('work_start')->useCurrent()->nullable();
             $table->timestamp('work_end')->useCurrent()->nullable();
-            $table->timestamps($precision = 0);
-            $table->foreignId('user_id')->constrained('users');
+            $table->timestamps();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 
